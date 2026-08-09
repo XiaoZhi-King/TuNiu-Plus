@@ -1,0 +1,9 @@
+com\tuniu\ticket\service\impl\TrainTicketsServiceImpl.class
+com\tuniu\ticket\service\TrainTicketsService.class
+com\tuniu\ticket\dao\TrainTicketsMapper.class
+com\tuniu\ticket\controller\TrainTicketsController.class
+com\tuniu\ticket\service\CityService.class
+com\tuniu\ticket\TuniuTicketServiceApplication.class
+com\tuniu\ticket\dao\CityMapper.class
+com\tuniu\ticket\service\impl\CityServiceImpl.class
+com\tuniu\ticket\controller\CityController.class

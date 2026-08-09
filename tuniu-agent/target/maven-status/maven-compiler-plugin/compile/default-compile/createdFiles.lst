@@ -1,0 +1,8 @@
+com\tuniu\agent\TuniuAgentApplication.class
+com\tuniu\agent\service\Assistant.class
+com\tuniu\agent\tool\QueryCityTool.class
+com\tuniu\agent\tool\QueryTicketTool.class
+com\tuniu\agent\feign\OrderFeignClient.class
+com\tuniu\agent\feign\TicketFeignClient.class
+com\tuniu\agent\controller\AgentController.class
+com\tuniu\agent\tool\QueryOrderTool.class

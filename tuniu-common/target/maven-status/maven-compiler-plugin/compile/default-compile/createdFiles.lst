@@ -1,0 +1,14 @@
+com\tuniu\common\dto\OrderMessage.class
+com\tuniu\common\domain\City.class
+com\tuniu\common\util\SaltMD5Util.class
+com\tuniu\common\dto\ChatResponse.class
+com\tuniu\common\domain\TrainTickets.class
+com\tuniu\common\util\JwtUtil.class
+com\tuniu\common\domain\User.class
+com\tuniu\common\constant\CommonConstants.class
+com\tuniu\common\domain\Orders.class
+com\tuniu\common\vo\Result.class
+com\tuniu\common\vo\TokenUserIdVo.class
+com\tuniu\common\domain\OrderDetail.class
+com\tuniu\common\domain\Passenger.class
+com\tuniu\common\dto\ChatRequest.class

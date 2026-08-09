@@ -1,0 +1,14 @@
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\constant\CommonConstants.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\domain\City.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\domain\OrderDetail.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\domain\Orders.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\domain\Passenger.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\domain\TrainTickets.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\domain\User.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\dto\ChatRequest.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\dto\ChatResponse.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\dto\OrderMessage.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\util\JwtUtil.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\util\SaltMD5Util.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\vo\Result.java
+E:\idea\TuNiu-master\tuniu-common\src\main\java\com\tuniu\common\vo\TokenUserIdVo.java

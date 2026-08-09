@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tuniu-order-service" />
+        <module name="tuniu-user-service" />
+        <module name="TuNiu-Service" />
+        <module name="TuNiu-Receiver" />
+        <module name="tuniu-gateway" />
+        <module name="tuniu-common" />
+        <module name="tuniu-agent" />
+        <module name="tuniu-ticket-service" />
+        <module name="TuNiu" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="TuNiu" options="-parameters" />
+      <module name="TuNiu-Receiver" options="-parameters" />
+      <module name="TuNiu-Service" options="-parameters" />
+      <module name="tuniu-agent" options="-parameters" />
+      <module name="tuniu-common" options="-parameters" />
+      <module name="tuniu-gateway" options="-parameters" />
+      <module name="tuniu-order-service" options="-parameters" />
+      <module name="tuniu-ticket-service" options="-parameters" />
+      <module name="tuniu-user-service" options="-parameters" />
+    </option>
+  </component>
+</project>

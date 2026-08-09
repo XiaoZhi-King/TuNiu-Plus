@@ -1,0 +1,45 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: tuniu-agent
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: public
+
+# ========== LangChain4j 配置 ==========
+# OpenAI 兼容协议：可对接 OpenAI / DeepSeek / 通义千问 / Moonshot / 本地 vLLM-Ollama
+# 切换模型只需改 base-url / api-key / model-name 三行
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: sk-9573c863376a495ba4a3467b686b3555
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      model-name: qwen3.7-max-2026-05-17
+      temperature: 0.7
+      timeout: PT60S
+      log-requests: true
+      log-responses: false
+      max-retries: 2
+
+# Agent 系统提示词（@AiService 接口 @SystemMessage 引用）
+agent:
+  system-prompt: >-
+    你是途牛旅游的智能客服助手，可以帮用户查询城市、车票和订单信息。
+    请用简洁友好的中文回答。当需要查询具体数据时，调用对应的工具，不要编造数据。
+
+logging:
+  level:
+    com.tuniu.agent: info
+    dev.langchain4j: info
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: basic

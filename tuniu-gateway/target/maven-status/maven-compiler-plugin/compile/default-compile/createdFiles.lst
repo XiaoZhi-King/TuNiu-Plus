@@ -1,0 +1,3 @@
+com\tuniu\gateway\config\GatewayConfig.class
+com\tuniu\gateway\TuniuGatewayApplication.class
+com\tuniu\gateway\filter\AuthGlobalFilter.class

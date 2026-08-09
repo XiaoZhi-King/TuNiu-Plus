@@ -1,0 +1,12 @@
+com\tuniu\order\service\OrderService.class
+com\tuniu\order\mq\OrderMessageConsumer.class
+com\tuniu\order\TuniuOrderServiceApplication.class
+com\tuniu\order\feign\TicketFeignClient.class
+com\tuniu\order\dao\OrderDetailMapper.class
+com\tuniu\order\mq\RabbitMQConfig.class
+com\tuniu\order\service\impl\OrderServiceImpl.class
+com\tuniu\order\controller\OrdersController.class
+com\tuniu\order\dao\OrderMapper.class
+com\tuniu\order\controller\AliPayController.class
+com\tuniu\order\feign\PassengerFeignClient.class
+com\tuniu\order\mq\OrderProducer.class

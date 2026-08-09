@@ -1,0 +1,54 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: tuniu-gateway
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: public
+    gateway:
+      # 服务名负载均衡发现（保留以兼容显式 lb:// 路由）
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        # 用户服务：用户、乘车人
+        - id: tuniu-user-service
+          uri: lb://tuniu-user-service
+          predicates:
+            - Path=/user/**,/passenger/**
+        # 票务服务：城市、车票查询
+        - id: tuniu-ticket-service
+          uri: lb://tuniu-ticket-service
+          predicates:
+            - Path=/city/**,/trainTickets/**
+        # 订单服务：订单、模拟支付（含限流，防高并发刷单）
+        - id: tuniu-order-service
+          uri: lb://tuniu-order-service
+          predicates:
+            - Path=/orders/**,/alipay/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 20
+                redis-rate-limiter.burstCapacity: 50
+                key-resolver: "#{@userKeyResolver}"
+        # Agent 智能体服务
+        - id: tuniu-agent
+          uri: lb://tuniu-agent
+          predicates:
+            - Path=/agent/**
+
+logging:
+  level:
+    com.tuniu.gateway: info
+    org.springframework.cloud.gateway: info

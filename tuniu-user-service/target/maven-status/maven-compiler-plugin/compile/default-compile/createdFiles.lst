@@ -1,0 +1,10 @@
+com\tuniu\user\controller\UserController.class
+com\tuniu\user\service\UserService.class
+com\tuniu\user\TuniuUserServiceApplication.class
+com\tuniu\user\service\impl\UserServiceImpl.class
+com\tuniu\user\config\MybatisPlusConfig.class
+com\tuniu\user\dao\UserMapper.class
+com\tuniu\user\controller\PassengerController.class
+com\tuniu\user\service\PassengerService.class
+com\tuniu\user\service\impl\PassengerServiceImpl.class
+com\tuniu\user\dao\PassengerMapper.class

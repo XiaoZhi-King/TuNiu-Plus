@@ -1,0 +1,59 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: tuniu-order-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tuniu?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 3000ms
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 123456
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: auto
+        prefetch: 5
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: public
+
+# Redisson 配置（与 Spring Data Redis 共用同一 Redis 实例）
+redisson:
+  config: |
+    singleServerConfig:
+      address: "redis://localhost:6379"
+      database: 0
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.tuniu.common.domain
+  global-config:
+    db-config:
+      id-type: auto
+
+logging:
+  level:
+    com.tuniu.order: info
+
+# OpenFeign 日志
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: basic
